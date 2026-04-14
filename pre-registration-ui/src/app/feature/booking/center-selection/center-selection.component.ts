@@ -200,18 +200,19 @@ export class CenterSelectionComponent
   async getRecommendedCenters() {
     this.totalItems = 0;
     this.nearbyClicked = false;
-    let uiFieldName = null;
-    this.identityData.forEach((obj) => {
-      if (
-        obj.inputRequired === true &&
-        obj.controlType !== null &&
-        (obj.controlType !== "fileupload")
-      ) {
-        if (obj.locationHierarchyLevel && this.recommendedCenterLocCode == obj.locationHierarchyLevel) {
-          uiFieldName = obj.id;
-        }
-      }
-    });
+    // changed to meet the requirements for zambia
+    let uiFieldName = "region"; 
+    // this.identityData.forEach((obj) => {
+    //   if (
+    //     obj.inputRequired === true &&
+    //     obj.controlType !== null &&
+    //     (obj.controlType !== "fileupload")
+    //   ) {
+    //     if (obj.locationHierarchyLevel && this.recommendedCenterLocCode == obj.locationHierarchyLevel && ) {
+    //       uiFieldName = obj.id;
+    //     }
+    //   }
+    // });
     if (!uiFieldName) {
       this.showErrorMessage(null, this.errorlabels.error);
     } else {

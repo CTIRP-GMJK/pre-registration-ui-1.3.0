@@ -2,7 +2,7 @@
   <mat-spinner></mat-spinner>
 </div>
 
-<div *ngIf="!showSpinner" class="login-display" [dir]="dir">
+<div *ngIf="!showSpinner" class="login-display" [dir]="dir" [ngStyle]="{'background-image': 'url(assets/prereg-login1.png)'}">
   <div class="form_wrapper">
     <div class="card">
       <div class="heading">
@@ -110,7 +110,7 @@
             >:<span id="secondsSpan">{{ seconds }}</span>
           </div>
           <div class="center-div">
-            <img src="assets\zam-identity.jpg" alt="Zambia logo" style="height:6rem; vertical-align: center; horizontal-align: center;" />
+            <img src="assets\zam-identity.jpg" alt="Zambia logo" style="height:10rem; vertical-align: center; horizontal-align: center;" />
           </div>
         </div>
       </div>
