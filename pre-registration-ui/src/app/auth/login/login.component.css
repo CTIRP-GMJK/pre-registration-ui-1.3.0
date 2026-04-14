@@ -40,7 +40,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(0.25turn, #f68a8a52, #011924db,#f69d3c);
+  background-image: url('/assets/prereg-login1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .login-display .form_wrapper {
